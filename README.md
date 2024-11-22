@@ -1,7 +1,5 @@
 # 9.1-Magic-Squares
 
-### Magic Squares Assignment  
-
 #### Objective  
 Create a program to determine whether a square matrix is a *magic square*. A *magic square* is a square matrix where the sum of every row, column, and both diagonals is the same.
 
@@ -11,7 +9,7 @@ Create a program to determine whether a square matrix is a *magic square*. A *ma
 
 1. **Files to Work With**:  
    - `Square.java`: Implements the `Square` class with methods to handle square matrices.
-   - `SquareTest.java`: A test program to verify the magic square functionality.
+   - `Main.java`: A test program to verify the magic square functionality.
 
 2. **Requirements**:  
    - In `Square.java`, write the following methods:
@@ -47,107 +45,12 @@ Create a program to determine whether a square matrix is a *magic square*. A *ma
 
 ---
 
-#### File Details  
+### **Test Program**  
 
-**`Square.java`**  
-The `Square` class should include:  
-- A 2D array `square` to represent the matrix.  
-- Methods to calculate sums and determine if the square is magic.  
-
-**Skeleton Code**:  
-```java
-import java.util.Scanner;
-
-public class Square {
-    int[][] square;
-
-    public Square(int size) {
-        square = new int[size][size];
-    }
-
-    public int sumRow(int row) {
-        // Implement logic to calculate the sum of a row
-    }
-
-    public int sumCol(int col) {
-        // Implement logic to calculate the sum of a column
-    }
-
-    public int sumMainDiag() {
-        // Implement logic to calculate the sum of the main diagonal
-    }
-
-    public int sumOtherDiag() {
-        // Implement logic to calculate the sum of the secondary diagonal
-    }
-
-    public boolean magic() {
-        // Implement logic to check if the square is magic
-    }
-
-    public void readSquare(Scanner scan) {
-        for (int row = 0; row < square.length; row++) {
-            for (int col = 0; col < square.length; col++) {
-                square[row][col] = scan.nextInt();
-            }
-        }
-    }
-
-    public void printSquare() {
-        // Implement logic to print the matrix
-    }
-}
-```
-
----
-
-**`SquareTest.java`**  
-The `SquareTest` class should:
 - Read the size of a square from `magicData`.
 - Create a new `Square` object and populate it using the `readSquare` method.
 - Print the matrix and check if it’s a magic square.  
-
-**Skeleton Code**:  
-```java
-import java.util.Scanner;
-import java.io.File;
-import java.io.IOException;
-
-public class SquareTest {
-    public static void main(String[] args) throws IOException {
-        Scanner scan = new Scanner(new File("magicData"));
-        int count = 1; // Counter for square number
-        int size = scan.nextInt(); // Read size of the first square
-
-        while (size != -1) {
-            Square square = new Square(size); // Create new Square
-            square.readSquare(scan); // Read values into the square
-
-            System.out.println("\n******** Square " + count + " ********");
-            square.printSquare();
-
-            // Print sums of rows, columns, and diagonals
-            for (int i = 0; i < size; i++) {
-                System.out.println("Sum of row " + i + ": " + square.sumRow(i));
-                System.out.println("Sum of column " + i + ": " + square.sumCol(i));
-            }
-            System.out.println("Sum of main diagonal: " + square.sumMainDiag());
-            System.out.println("Sum of other diagonal: " + square.sumOtherDiag());
-
-            // Check and print if the square is magic
-            System.out.println("Is magic? " + square.magic());
-
-            // Move to the next square
-            size = scan.nextInt();
-            count++;
-        }
-    }
-}
-```
-
----
-
-#### Example Run  
+ 
 
 **Input (`magicData`)**:  
 ```  
