@@ -20,7 +20,7 @@ Create a program to determine whether a square matrix is a *magic square*. A *ma
      - `boolean magic()`: Returns `true` if the square is magic.
      - `void printSquare()`: Prints the contents of the square, formatted neatly.
 
-   - Complete `SquareTest.java` to:
+   - Complete `Main.java` to:
      - Read input from the file `magicData`.
      - Use the `Square` class to check whether the matrices in the file are magic squares.
      - Print the sums of rows, columns, and diagonals for each matrix.
