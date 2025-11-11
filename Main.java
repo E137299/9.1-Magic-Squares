@@ -3,7 +3,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Main{
-  public static void main(String[] args){
+  public static void main(String[] args) throws IOException{
       Scanner scan = new Scanner(new File("magicData.txt"));
       int count = 1; // Counter for square number
       int size = scan.nextInt(); // Read size of the first square
@@ -22,5 +22,6 @@ public class Main{
       }
   }
 }
+
 
 
